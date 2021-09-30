@@ -19,5 +19,11 @@ Route::get('/', function () {
 
 
 Route::get('/users', function () {
-    return 'ola mundo'
+    return 'ola mundo';
 });
+
+Route::get($url, $callbak); //lista registro
+Route::post($url, $callbak);//ibserir registro
+Route::put($url, $callbak);//edição de registro 
+Route::patch($url, $callbak);//editar regsitros
+Route::delete($url, $callbak);//deletar regsitro
