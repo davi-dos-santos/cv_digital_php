@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +23,21 @@ Route::get('/users', function () {
     return 'ola mundo';
 });
 
-Route::get($url, $callbak); //lista registro
-Route::post($url, $callbak);//ibserir registro
-Route::put($url, $callbak);//edição de registro 
-Route::patch($url, $callbak);//editar regsitros
-Route::delete($url, $callbak);//deletar regsitro
+Route::get('/user', [UserController::class, 'get']);
+
+
+//Route::get('/users/{name}', function ($name) {
+//    return 'ola '.$name;
+//});
+
+//Route::fallback(function()){
+//    return "Essa rota não existe"
+//}
+
+//Route::redirect('/users', '\user') //redirecionar rota
+
+//Route::get($url, $callbak); //lista registro
+//Route::post($url, $callbak);//ibserir registro
+//Route::put($url, $callbak);//edição de registro 
+//Route::patch($url, $callbak);//editar regsitros
+//Route::delete($url, $callbak);//deletar regsitro
